@@ -100,5 +100,19 @@ else{
 	echo "Error";
 }
 
+//temp remove user
+
+$getactiveid = $api->comm("/ppp/active/print", array(
+
+".proplist" => ".id",
+"?name" => "name"
+
+));
+
+$api->comm("/ppp/active/remove", array(
+
+".id" => $getactiveid[0][".id"],
+
+));
 
 ?>
