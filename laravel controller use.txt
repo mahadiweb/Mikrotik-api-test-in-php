@@ -1,0 +1,4 @@
+include 'RouterosAPI.php';
+$api = new RouterosAPI();
+
+$api->connect($ip,$username,$password);
